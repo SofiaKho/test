@@ -44,26 +44,27 @@ namespace test
             long lagrarMönster = 0;
 
             // En loop som går igenom varje matchning enligt (siffermönster) för varje matchning sker följande 
-            foreach (Match match in matchaMönster);
+            foreach (Match match in matchaMönster)
             {
                 // markeras med röd så vi ser matchningen tydligare
                 Console.ForegroundColor = ConsoleColor.Red;
 
-                // Skriver ut en text innan det matchande talet kommer 
+                // Skriver ut en text innan det matchande talet kommer (utan att lägga till en ny rad)
                 Console.Write(input.Substring(0, match.Index));
 
-                // Här kommer det matchande talet markeras med röd efter texten 
+                // Här kommer det matchande talet markeras med röd efter texten (utan att lägga till en ny rad)
                 Console.Write(match.Value);
 
                 // Återsätller till den gamla färgen till resten av texten då bara matchande enligt (siffermönster) ska varqa röd
                 Console.ResetColor();
 
-                // Skriver ut texten som kommer efter det matchande talet med den vanliga färgen och gåt till nästa rad
-                Console.WriteLine(input.Substring(match.Index + match.Lenght));
+                // Skriver ut texten som kommer efter det matchande talet med den vanliga färgen (lägger till en ny rad) så det härefter börjar på en ny linje
+                Console.WriteLine(input.Substring(match.Index + match.Length));
                 
+                Console.ReadKey();
 
               
-
+                
 
 
 
